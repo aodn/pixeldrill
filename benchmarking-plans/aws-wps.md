@@ -15,7 +15,7 @@ We have a dev profile for aws-wps called, ```sample-config/vars/aws_wps/pixeldri
         <wps:Input>
             <ows:Identifier>subset</ows:Identifier>
             <wps:Data>
-                <wps:LiteralData>TIME,2015-07-25T15:20:00.000Z,2021-07-25T15:20:00.000Z;LATITUDE,-20.88,-20.88;LONGITUDE,111.45,111.45</wps:LiteralData>
+                <wps:LiteralData>TIME,2021-07-25T15:20:00.000Z,2021-07-25T15:20:00.000Z;LATITUDE,-20.88,-20.88;LONGITUDE,111.45,111.45</wps:LiteralData>
             </wps:Data>
         </wps:Input>
     </wps:DataInputs>

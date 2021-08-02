@@ -31,6 +31,6 @@ We have a dev profile for aws-wps called, ```sample-config/vars/aws_wps/pixeldri
 
 2. Open https://pixeldrill-wps.dev.aodn.org.au/wps/jobStatus?format=queue in a browser to see the current job history
 2. When the job is finished, click the "log" link
-3. 1. Search for the message "Commencing download" and note the time
-1. Search for the message : "Raw aggregated file size" and not the time
-1. Calculate the time difference
+2. Search for the message "Commencing download" and note the time
+2. Search for the message : "Raw aggregated file size" and not the time
+2. Calculate the time difference

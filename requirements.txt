@@ -1,2 +1,3 @@
-h5py
-fsspec
+xarray
+git+https://github.com/intake/fsspec-reference-maker.git
+zarr

@@ -2,11 +2,9 @@
 Temporary repository used for work on pixeldrill project. For ease of development this repository has been made public, however it is for internal use only.
 
 # Notebook Usage
-The notebook can be accessed on the AWS console via the address https://ap-southeast-2.console.aws.amazon.com/sagemaker/home?region=ap-southeast-2#/notebook-instances/pixeldrill-notebook
-
+The notebook can be accessed on the AWS console via the address https://ap-southeast-2.console.aws.amazon.com/sagemaker/home?region=ap-southeast-2#/notebook-instances/pixeldrill-notebook 
 You will need to be an administrator on nonproduction account, following [the aws authenitcation guide](https://github.com/aodn/internal-discussions/wiki/AWS-authentication-guide)
-
-It will turn off after 2 hours of disuse. Click "Start" to restart it and then "Open JupyterLab" to get into the notebook itself.
+It will turn off after 2 hours of disuse. Click "Start" to restart it and then "Open JupyterLab" to get into the notebook itself. Use the conda_mxnet_latest_p37 python environment, which will have all the libraries from requirements.txt installed by default.
 
 ## S3 Bucket
 A temporary s3 bucket has been created with the name "imos-data-pixeldrill". It can be accessed at http://imos-data-pixeldrill.s3-website-ap-southeast-2.amazonaws.com/. It contains copies of one set of gridded data which we can benchmark on. Data can be-copied by devs using the following command:

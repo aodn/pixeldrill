@@ -1,5 +1,0 @@
-Resources:
-  notebook:
-    CloudformationTemplateURL: misc/notebook.yaml
-
-parent_stack_enabled: false

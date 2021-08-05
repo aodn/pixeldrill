@@ -48,4 +48,4 @@ Resources:
               # install requirements for pixeldrilling
               sudo -u ec2-user -i <<'EOF'
               source activate mxnet_latest_p37
-              pip install -r /home/ec2-user/SageMaker/pixeldrill/requirements.txt
+              pip install -r https://raw.githubusercontent.com/aodn/pixeldrill/main/requirements.txt

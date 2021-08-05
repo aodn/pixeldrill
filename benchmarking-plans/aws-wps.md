@@ -1,5 +1,5 @@
 # AWS-WPS Benchmarking Plan
-We have a dev profile for aws-wps (in tje vars dir), which will be accesible at https://pixeldrill-wps.dev.aodn.org.au/wps.
+We have a dev profile for aws-wps (in the vars dir), which will be accesible at https://pixeldrill-wps.dev.aodn.org.au/wps.
 
 1. Send a POST request to https://pixeldrill-wps.dev.aodn.org.au/wps with the following raw input, altering the time and location in line 18 appropriately
 ```xml

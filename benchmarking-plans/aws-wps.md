@@ -28,9 +28,9 @@ We have a dev profile for aws-wps (in the vars dir), which will be accesible at 
     </wps:ResponseForm>
 </wps:Execute>
 ```
-
+2. Open an AWS console and switch to nonproduction account
 2. Open https://pixeldrill-wps.dev.aodn.org.au/wps/jobStatus?format=queue in a browser to see the current job history
-2. When the job is finished, click the "log" link
-2. In the "filte revents" search bar, type "Commencing download" and note the time of the message result
-2. In the "filte revents" search bar, type  "Raw aggregated file size" and note the time of the message result
-2. Calculate the time difference
+4. When the job is finished, click the "log" link
+5. In the "filte revents" search bar, type "Commencing download" and note the time of the message result
+6. In the "filte revents" search bar, type  "Raw aggregated file size" and note the time of the message result
+7. Calculate the time difference

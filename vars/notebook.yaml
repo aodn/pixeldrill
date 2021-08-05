@@ -3,3 +3,6 @@ Resources:
     CloudformationTemplateURL: ../../pixeldrill/notebook.yaml
 
 parent_stack_enabled: false
+
+StackTags:
+  AutoOff: 'False'

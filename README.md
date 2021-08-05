@@ -1,5 +1,5 @@
 # pixeldrill
-Temporary repository used for work on pixeldrill project. For ease this repository has been made public, however it is for internal use only.
+Temporary repository used for work on pixeldrill project. For ease of development this repository has been made public, however it is for internal use only.
 
 
 ## S3 Bucket

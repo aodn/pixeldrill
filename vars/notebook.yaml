@@ -1,6 +1,6 @@
 Resources:
   notebook:
-    CloudformationTemplateURL: ../../pixeldrill/notebook.yaml
+    CloudformationTemplateURL: ../../pixeldrill/cloudformation/notebook.yaml
 
 parent_stack_enabled: false
 

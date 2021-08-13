@@ -30,7 +30,4 @@ We have a dev profile for aws-wps (in the vars dir), which will be accesible at 
 ```
 2. Open an AWS console and switch to nonproduction account
 2. Open https://pixeldrill-wps.dev.aodn.org.au/wps/jobStatus?format=queue in a browser to see the current job history
-4. When the job is finished, click the "log" link
-5. In the "filter events" search bar, type "Commencing download" and note the timestamp of the message result
-6. In the "filter events" search bar, type  "Raw aggregated file size" and note the timestamp of the message result
-7. Calculate the time difference
+4. Calculate the difference between the "Started" time and the "Completed" time for your job 

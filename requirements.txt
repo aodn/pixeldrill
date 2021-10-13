@@ -1,3 +1,4 @@
 xarray
 git+https://github.com/intake/fsspec-reference-maker.git
 zarr
+jedi==0.17.2 

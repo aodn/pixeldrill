@@ -7,7 +7,6 @@ SHELL ["/bin/bash", "-c"]
 
 ENV PATH /opt/conda/bin:$PATH
 ENV PYTHON_VERSION=${python}
-ENV DASK_VERSION=${release}
 
 RUN conda install --yes nomkl cytoolz cmake \
     && conda install --yes mamba \
@@ -15,6 +14,7 @@ RUN conda install --yes nomkl cytoolz cmake \
     python=${PYTHON_VERSION} \
     python-blosc \
     cytoolz \
+    dask \
     lz4 \
     numpy==1.21.1 \
     pandas==1.3.0 \

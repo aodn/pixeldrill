@@ -5,3 +5,5 @@ dask-cloudprovider==2021.9.0
 distributed==2021.9.0
 dask-cloudprovider==2021.9.0
 jedi==0.17.2 
+s3fs
+fsspec

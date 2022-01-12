@@ -6,7 +6,7 @@ Resources:
       wpsDomainName: pixeldrill-wps
       geoserver: http://geoserver-123.aodn.org.au/geoserver/imos/ows
       templatesURL: https://raw.githubusercontent.com/aodn/geoserver-config/production/wps/templates.xml
-      geonetworkCatalogueURL: http://catalogue-sandbox.aodn.org.au/geonetwork
+      geonetworkCatalogueURL: http://catalogue-portal.aodn.org.au/geonetwork
       sourceArn: arn:aws:ses:us-east-1:615645230945:identity/aodn.org.au
       AllowEphemeralBuckets: 'true'
       dataDownloadUrlPrefix: http://imos-data-pixeldrill.s3-website-ap-southeast-2.amazonaws.com/

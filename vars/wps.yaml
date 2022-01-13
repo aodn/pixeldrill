@@ -15,8 +15,7 @@ Resources:
 Lambdas:
   - s3prefix://imos-artifacts/promoted/aws-wps/systest?pattern=^.*job\-status\-service\-lambda\-package\.zip$&local_file=job-status-service-lambda-package.zip
   - s3prefix://imos-artifacts/promoted/aws-wps/systest?pattern=^.*request\-handler\-lambda\-package\.zip$&local_file=request-handler-lambda-package.zip
-  - sumologic
-
+  
 parent_stack_enabled: false
 
 StackTags:

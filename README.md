@@ -18,7 +18,7 @@ The following example python scripts will load data for the years 2010 and 2011 
 import xarray as xr
 references = [f's3://imos-data-pixeldrill/zarrs/{year}/'for year in range(2010, 2012)]
 zarrs = [xr.open_zarr(r) for r in references]
-ds = xr.concat(zarrs,dim='time',coords='minimal',compat='override',combine_attrs='override', fill_value='')
+data = xr.concat(zarrs,dim='time',coords='minimal',compat='override',combine_attrs='override', fill_value='')
 ```
 
 ### Index Access

@@ -2,9 +2,7 @@ Pixel Drill
 =
 Pixel Drill is an investigation into methods for efficient extraction of long time-series from IMOS satellite gridded products. This is work towards a Q4 milestone in the 2020-21 AODN Implementation Plan.
 
-```
-Develop prototype to more efficiently extract long time-series from IMOS satellite gridded products (e.g. investigate new tools or data structure such as Pangeo and ERRDAP and their integration with AODN infrastructure on AWS for a selected number of gridded dataset collections).
-```
+> Develop prototype to more efficiently extract long time-series from IMOS satellite gridded products (e.g. investigate new tools or data structure such as Pangeo and ERRDAP and their integration with AODN infrastructure on AWS for a selected number of gridded dataset collections).
 
 This repository is temporary for the purpose of work on pixeldrill project. For ease of development this repository has been made public, however it is for internal use only.
 

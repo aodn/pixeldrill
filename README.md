@@ -1,4 +1,4 @@
-#Pixel Drill
+# Pixel Drill
 
 Pixel Drill is an investigation into methods for efficient extraction of long time-series from IMOS satellite gridded products. This is work towards a Q4 milestone in the 2020-21 AODN Implementation Plan.
 

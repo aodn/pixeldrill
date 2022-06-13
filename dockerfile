@@ -12,6 +12,7 @@ RUN conda install --yes nomkl cytoolz cmake \
     && conda install --yes mamba \
     && mamba install --yes -c conda-forge \
     python=${PYTHON_VERSION} \
+    bokeh \
     python-blosc \
     cytoolz \
     dask \
@@ -21,7 +22,7 @@ RUN conda install --yes nomkl cytoolz cmake \
     tini==0.18.0 \
     cachey \
     streamz \
-    && mamba clean -tipsy \
+    && mamba clean -tipy \
     && find /opt/conda/ -type f,l -name '*.a' -delete \
     && find /opt/conda/ -type f,l -name '*.pyc' -delete \
     && find /opt/conda/ -type f,l -name '*.js.map' -delete \

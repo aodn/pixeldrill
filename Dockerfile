@@ -1,7 +1,7 @@
 ARG BASE_CONTAINER=condaforge/mambaforge:latest
 FROM $BASE_CONTAINER
 
-ARG python=3.8
+ARG python=3.7
 
 SHELL ["/bin/bash", "-c"]
 
@@ -35,9 +35,6 @@ COPY requirements.txt /tmp/
 RUN apt-get update && apt-get -y install gcc vim nano libsqlite3-dev
 RUN python -m pip install --upgrade pip \
     && pip install --requirement /tmp/requirements.txt
-
-# COPY environment.yml /tmp/
-# RUN conda env update -f /tmp/environment.yml
 
 COPY prepare.sh /usr/bin/prepare.sh
 

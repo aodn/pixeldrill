@@ -36,8 +36,8 @@ RUN apt-get update && apt-get -y install gcc vim nano libsqlite3-dev
 RUN python -m pip install --upgrade pip \
     && pip install --requirement /tmp/requirements.txt
 
-COPY environment.yml /tmp/
-RUN conda env update -f /tmp/environment.yml
+# COPY environment.yml /tmp/
+# RUN conda env update -f /tmp/environment.yml
 
 COPY prepare.sh /usr/bin/prepare.sh
 

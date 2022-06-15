@@ -1,24 +1,24 @@
 ARG BASE_CONTAINER=condaforge/miniforge3:4.10.3-2
 FROM $BASE_CONTAINER
 
-ARG python=3.7
+ARG python=3.8
 
 SHELL ["/bin/bash", "-c"]
 
 ENV PATH /opt/conda/bin:$PATH
 ENV PYTHON_VERSION=${python}
 
-RUN conda install --yes nomkl cytoolz cmake \
-    && conda install --yes mamba \
-    && mamba install --yes -c conda-forge \
+RUN mamba install -y \
     python=${PYTHON_VERSION} \
     bokeh \
+    nomkl \
+    cmake \
     python-blosc \
     cytoolz \
     dask \
     lz4 \
-    numpy==1.21.1 \
-    pandas==1.3.0 \
+    numpy \
+    pandas \
     tini==0.18.0 \
     cachey \
     streamz \
@@ -31,6 +31,9 @@ RUN conda install --yes nomkl cytoolz cmake \
 
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
+
+COPY environment.yml /tmp/
+RUN conda env update -f /tmp/environment.yml
 
 COPY prepare.sh /usr/bin/prepare.sh
 

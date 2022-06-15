@@ -32,4 +32,9 @@ RUN conda install --yes nomkl cytoolz cmake \
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 
+COPY prepare.sh /usr/bin/prepare.sh
+
 RUN mkdir /opt/app
+
+RUN ["chmod", "+x", "/usr/bin/prepare.sh"]
+ENTRYPOINT ["tini", "-g", "--", "/usr/bin/prepare.sh"]

@@ -1,0 +1,20 @@
+# channels:
+#   - conda-forge
+
+dependencies:
+  - python >=3.7
+  # Production
+  - click
+  - dask
+  - fsspec
+  - netcdf4
+  - numpy
+  - pandas
+  - pyyaml
+  - retry
+  - s3fs >=2022.1.0
+  - xarray
+  - zarr
+  # Testing
+  - pytest
+  - pytest-cov

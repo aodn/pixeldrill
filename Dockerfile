@@ -13,6 +13,7 @@ RUN mamba install -y \
     bokeh \
     nomkl \
     cmake \
+    click==8.0.4 \
     python-blosc \
     cytoolz \
     dask \

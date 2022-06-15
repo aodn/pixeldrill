@@ -29,8 +29,12 @@ RUN mamba install -y \
     && find /opt/conda/lib/python*/site-packages/bokeh/server/static -type f,l -name '*.js' -not -name '*.min.js' -delete \
     && rm -rf /opt/conda/pkgs
 
+
+# Install requirements.txt defined libraries
 COPY requirements.txt /tmp/
-RUN pip install --requirement /tmp/requirements.txt
+RUN apt-get update && apt-get -y install gcc vim nano libsqlite3-dev
+RUN python -m pip install --upgrade pip \
+    && pip install --requirement /tmp/requirements.txt
 
 COPY environment.yml /tmp/
 RUN conda env update -f /tmp/environment.yml

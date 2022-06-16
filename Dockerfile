@@ -1,19 +1,28 @@
 ARG BASE_CONTAINER=condaforge/mambaforge:latest
 FROM $BASE_CONTAINER
 
-ARG python=3.7
-
 SHELL ["/bin/bash", "-c"]
+
+ARG python=3.7
 
 ENV PATH /opt/conda/bin:$PATH
 ENV PYTHON_VERSION=${python}
 
 RUN mamba install -y \
-    python=${PYTHON_VERSION} \
+    python>=${PYTHON_VERSION} \
     bokeh \
+    click==8.0.4 \
+    fsspec \
+    netcdf4 \
+    pyyaml \
+    retry \
+    s3fs >=2022.1.0 \
+    xarray \
+    zarr \
+    pytest \
+    pytest-cov \
     nomkl \
     cmake \
-    click==8.0.4 \
     python-blosc \
     cytoolz \
     dask \
@@ -29,7 +38,6 @@ RUN mamba install -y \
     && find /opt/conda/ -type f,l -name '*.js.map' -delete \
     && find /opt/conda/lib/python*/site-packages/bokeh/server/static -type f,l -name '*.js' -not -name '*.min.js' -delete \
     && rm -rf /opt/conda/pkgs
-
 
 # Install requirements.txt defined libraries
 COPY requirements.txt /tmp/

@@ -8,19 +8,17 @@ ARG python=3.7
 ENV PATH /opt/conda/bin:$PATH
 ENV PYTHON_VERSION=${python}
 
+# Create the environment:
+COPY environment.yml /tmp/
+RUN conda env create -f /tmp/environment.yml
+
+# Activate the environment, and make sure it's activated:
+RUN source activate nc2zarr
+
 RUN mamba install -y \
-    python>=${PYTHON_VERSION} \
+    python=${PYTHON_VERSION} \
     bokeh \
     click==8.0.4 \
-    fsspec \
-    netcdf4 \
-    pyyaml \
-    retry \
-    s3fs >=2022.1.0 \
-    xarray \
-    zarr \
-    pytest \
-    pytest-cov \
     nomkl \
     cmake \
     python-blosc \
@@ -41,9 +39,13 @@ RUN mamba install -y \
 
 # Install requirements.txt defined libraries
 COPY requirements.txt /tmp/
-RUN apt-get update && apt-get -y install gcc vim nano libsqlite3-dev
+RUN apt-get update && apt-get -y install gcc iputils-ping vim nano libsqlite3-dev
 RUN python -m pip install --upgrade pip \
     && pip install --requirement /tmp/requirements.txt
+
+# set nc2zarr as default env
+RUN echo "source activate nc2zarr" > ~/.bashrc
+ENV PATH /opt/conda/envs/nc2zarr/bin:$PATH
 
 COPY prepare.sh /usr/bin/prepare.sh
 
